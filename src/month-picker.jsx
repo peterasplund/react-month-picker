@@ -270,7 +270,9 @@ let MonthPicker = React.createClass({
                     <div className="cell">
                         <div className={["popup", popupClass , this.props.theme, (this.state.showed ? "show" : '')].join(' ')}>
                             {pads}
-                            <Tappable className="submit" onTap={this._handleOverlayTouchTap} />
+                            <Tappable className="submit" onTap={this._handleOverlayTouchTap}>
+                                <button>{lang['submit] || 'Submit'}</button>
+                            </Tappable>
                         </div>
                     </div>
                 </div>

@@ -19,8 +19,6 @@
 
 
 import React from 'react'
-import Tappable from 'react-tapper'
-
 
 const __MIN_VALID_YEAR = 1970
 
@@ -261,18 +259,14 @@ let MonthPicker = React.createClass({
         else {
             pads.push( this.optionPad(0) )
         }
-
         return (
             <div className={["month-picker", this.props.className].join(' ')}>
                 {this.props.children}
                 <div className={["container", "table", this.props.className, (this.state.showed ? "show" : '')].join(' ')}>
-                    <Tappable className="overlay" onTap={this._handleOverlayTouchTap} />
+                    <div className="overlay" onClick={this._handleOverlayTouchTap} />
                     <div className="cell">
                         <div className={["popup", popupClass , this.props.theme, (this.state.showed ? "show" : '')].join(' ')}>
                             {pads}
-                            <Tappable className="submit" onTap={this._handleOverlayTouchTap}>
-                                <button>{lang['submit] || 'Submit'}</button>
-                            </Tappable>
                         </div>
                     </div>
                 </div>

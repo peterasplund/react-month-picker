@@ -74,20 +74,7 @@ function getYearArray(years) {
 
 
 let MonthPicker = React.createClass({
-
-    propTypes: {
-        years: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.object, React.PropTypes.number])
-        , value: React.PropTypes.object
-        , range: React.PropTypes.object
-        , lang: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.object])
-        , onChange: React.PropTypes.func
-        , onShow: React.PropTypes.func
-        , onDismiss: React.PropTypes.func
-        , onClickAway: React.PropTypes.func
-        , theme: React.PropTypes.string
-    }
-
-    , validate(d, years, idx, yearIndexes) {
+    validate(d, years, idx, yearIndexes) {
         let now = new Date()
             , thisYear = now.getFullYear()
             , ym
